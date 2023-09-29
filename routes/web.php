@@ -24,6 +24,7 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('tarefa/exportacao/{extensao}', [TarefaController::class, 'exportacao'])->name('tarefa.exportacao');
+Route::get('tarefa/exportar', [TarefaController::class, 'exportar'])->name('tarefa.exportar');
 Route::resource('tarefa', TarefaController::class)->middleware('verified');
 
 Route::get('mensagem-teste', function () {

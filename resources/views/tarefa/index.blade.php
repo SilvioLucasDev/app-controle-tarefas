@@ -7,14 +7,16 @@
                 <div class='card'>
                     <div class='card-header'>
                         <div class='row'>
-                            <div class='col-6'>
+                            <div class='col-3'>
                                 {{ __('Tarefas') }}
                             </div>
-                            <div class='col-6'>
+                            <div class='col-9'>
                                 <div class='float-end'>
-                                    <a href='{{ route('tarefa.create') }}' style='margin-right: 0.6rem;'>Novo</a>
+                                    <a href='{{ route('tarefa.create') }}' style='margin-right: 0.6rem;'>Nova Tarefa</a>
                                     <a href='{{ route('tarefa.exportacao', 'xlsx') }}' style='margin-right: 0.6rem;'>XLSX</a>
-                                    <a href='{{ route('tarefa.exportacao', 'csv') }}'>CSV</a>
+                                    <a href='{{ route('tarefa.exportacao', 'csv') }}' style='margin-right: 0.6rem;'>CSV</a>
+                                    <a href='{{ route('tarefa.exportacao', 'pdf') }}' style='margin-right: 0.6rem;'>PDF</a>
+                                    <a href='{{ route('tarefa.exportar') }}' target='_blank'>PDF V2</a>
                                 </div>
                             </div>
                         </div>
