@@ -5,7 +5,20 @@
         <div class='row justify-content-center'>
             <div class='col-md-8'>
                 <div class='card'>
-                    <div class='card-header'>{{ __('Tarefas') }}<a href="{{ route('tarefa.create') }}" class='float-end'>Novo</a></div>
+                    <div class='card-header'>
+                        <div class='row'>
+                            <div class='col-6'>
+                                {{ __('Tarefas') }}
+                            </div>
+                            <div class='col-6'>
+                                <div class='float-end'>
+                                    <a href='{{ route('tarefa.create') }}' style='margin-right: 0.6rem;'>Novo</a>
+                                    <a href='{{ route('tarefa.exportacao', 'xlsx') }}' style='margin-right: 0.6rem;'>XLSX</a>
+                                    <a href='{{ route('tarefa.exportacao', 'csv') }}'>CSV</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class='card-body'>
                         <table class='table'>
@@ -32,7 +45,7 @@
                                                 @method('DELETE')
                                             </form>
                                             <a href='#'
-                                                onclick='document.getElementById("form_{{ $tarefa->id }}").submit()'>Excluir</a>
+                                                onclick='document.getElementById('form_{{ $tarefa->id }}').submit()'>Excluir</a>
                                         </td>
                                     </tr>
                                 @endforeach
